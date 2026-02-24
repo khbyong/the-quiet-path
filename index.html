@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>the quiet path</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1>the quiet path</h1>
+      <p class="sub">a small journey of kai & june — wholesome, a little bittersweet</p>
+    </header>
+
+    <main>
+      <canvas id="game" width="320" height="288" aria-label="game canvas"></canvas>
+
+      <section class="hud" aria-label="help">
+        <div class="keys">
+          <div><kbd>←</kbd><kbd>↑</kbd><kbd>→</kbd><kbd>↓</kbd> move</div>
+          <div><kbd>space</kbd> talk / continue</div>
+          <div><kbd>z</kbd> run</div>
+          <div><kbd>m</kbd> mute</div>
+          <div><kbd>r</kbd> restart</div>
+        </div>
+      </section>
+
+      <section class="touch" aria-label="touch controls">
+        <div class="dpad" id="dpad">
+          <button data-dir="up" aria-label="up">▲</button>
+          <div class="mid">
+            <button data-dir="left" aria-label="left">◀</button>
+            <button data-dir="down" aria-label="down">▼</button>
+            <button data-dir="right" aria-label="right">▶</button>
+          </div>
+        </div>
+        <div class="ab">
+          <button id="btnA" aria-label="talk">A</button>
+          <button id="btnRun" aria-label="run">RUN</button>
+        </div>
+      </section>
+
+      <section class="note" id="note" hidden></section>
+    </main>
+
+    <footer>
+      <p class="small">tip: play in a quiet moment. it’s ~5–7 minutes.</p>
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
